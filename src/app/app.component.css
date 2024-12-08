@@ -1,0 +1,14 @@
+/* src/app/app.component.css or styles.css */
+
+.main-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 40vh; /* Full viewport height */
+  text-align: center; /* Center text horizontally */
+}
+
+h1 {
+  font-size: 2rem; /* You can adjust the font size if needed */
+  margin: 0;
+}

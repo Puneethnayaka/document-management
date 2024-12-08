@@ -1,0 +1,26 @@
+<div class="qna-container">
+  <h2>Ask a Question</h2>
+  <textarea [(ngModel)]="question" placeholder="Type your question here..." rows="4"></textarea>
+  
+  <button mat-raised-button color="primary" (click)="onSubmitQuestion()" [disabled]="loading">Ask</button>
+  
+  <div *ngIf="loading" class="loading">
+    <mat-spinner></mat-spinner>
+  </div>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+
+  <div *ngIf="answer" class="answer">
+    <h3>Answer:</h3>
+    <p>{{ answer }}</p>
+  </div>
+  
+  <div *ngIf="documentExcerpts.length > 0" class="document-excerpts">
+    <h3>Relevant Document Excerpts:</h3>
+    <ul>
+      <li *ngFor="let excerpt of documentExcerpts">{{ excerpt }}</li>
+    </ul>
+  </div>
+</div>
